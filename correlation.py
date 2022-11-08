@@ -20,6 +20,7 @@ threshold = 0.5
 # calculate fingerprint
 # Generate file.mp3.fpcalc by "fpcalc -raw -length 500 file.mp3"
 def calculate_fingerprints(filename):
+    print("filename = ", filename)
     if os.path.exists(filename + '.fpcalc'):
         print("Found precalculated fingerprint for %s" % (filename))
         f = open(filename + '.fpcalc', "r")
@@ -31,7 +32,7 @@ def calculate_fingerprints(filename):
 
     fingerprint_index = fpcalc_out.find('FINGERPRINT=') + 12
     # convert fingerprint to list of integers
-    fingerprints = list(map(int, fpcalc_out[fingerprint_index:].split(',')))
+    fingerprints = list(map(int, fpcalc_out[fingerprint_index:].strip('\\r').split(',')))
     
     return fingerprints
   

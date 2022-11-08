@@ -18,6 +18,9 @@ def initialize():
 if __name__ == "__main__":
     # SOURCE_FILE, TARGET_FILE = initialize()
     BASE_URL = "E:/Program/Python/audio-compare/"
-    SOURCE_FILE = BASE_URL + "highMark.wav"
-    TARGET_FILE = BASE_URL + "stander.wav"
+    # SOURCE_FILE = BASE_URL + "highMark.wav"
+    SOURCE_FILE = "LowMark.wav"
+    # TARGET_FILE = BASE_URL + "stander.wav"
+    # SOURCE_FILE = BASE_URL + "test2.wav"
+    TARGET_FILE = "test1.wav"
     correlate(SOURCE_FILE, TARGET_FILE)
