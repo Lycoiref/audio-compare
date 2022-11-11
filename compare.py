@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # compare.py
 import argparse
 from correlation import correlate
